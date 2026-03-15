@@ -76,12 +76,21 @@
     }
     .logo:hover { opacity: 0.6; }
 
-    .nav-tag {
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-link {
       font-size: var(--text-xs);
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
     }
+    .nav-link:hover { color: var(--fg); }
 
     /* ── Main ── */
     main {
@@ -345,11 +354,14 @@
       letter-spacing: 0.06em;
     }
 
-    .footer-endpoint {
+    .footer-link {
       font-size: var(--text-xs);
-      color: var(--border);
+      color: var(--muted);
       letter-spacing: 0.06em;
+      text-decoration: none;
+      transition: color 0.2s;
     }
+    .footer-link:hover { color: var(--fg); }
 
     /* ── Responsive ── */
     @media (max-width: 640px) {
@@ -366,7 +378,10 @@
 <header>
   <nav>
     <a href="/" class="logo">N</a>
-    <span class="nav-tag">Talent API</span>
+    <div class="nav-links">
+      <a href="https://www.nimasalami.dk" target="_blank" rel="noopener" class="nav-link">nimasalami.dk ↗</a>
+      <a href="/swagger-ui.html" target="_blank" rel="noopener" class="nav-link">Swagger ↗</a>
+    </div>
   </nav>
 </header>
 
@@ -387,7 +402,7 @@
 <footer>
   <div class="footer-inner">
     <span class="footer-note">Tech Chapter — Praktikansøgning 2026</span>
-    <span class="footer-endpoint">GET /talent/{id}/documents</span>
+    <a href="/swagger-ui.html" target="_blank" rel="noopener" class="footer-link">API docs ↗</a>
   </div>
 </footer>
 
