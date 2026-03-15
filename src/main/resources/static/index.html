@@ -561,6 +561,7 @@
       ${t.profileText ? `<p class="hero-bio">${esc(t.profileText)}</p>` : ''}
       ${metaItems.length ? `<div class="hero-meta">${metaItems.map(i => `<span class="hero-meta-item">${i}</span>`).join('')}</div>` : ''}
       ${links.length    ? `<div class="hero-links">${links.join('')}</div>` : ''}
+      <a class="doc-endpoint" href="/talent/${esc(t.id)}" target="_blank" rel="noopener" style="margin-top:1.25rem">GET /talent/${esc(t.id.slice(0, 8))}… ↗</a>
     `);
   }
 
