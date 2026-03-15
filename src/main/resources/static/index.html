@@ -226,6 +226,17 @@
       text-overflow: ellipsis;
     }
 
+    .doc-endpoint {
+      display: inline-block;
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      margin-top: 0.5rem;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .doc-endpoint:hover { color: var(--cyan); }
+
     .doc-arrow {
       font-size: var(--text-sm);
       color: var(--muted);
@@ -499,6 +510,11 @@
       return;
     }
 
+    const shortId  = id => id.slice(0, 8) + '…';
+    const endpointPath  = (tId, dId) => `/talent/${tId}/documents/${dId}`;
+    const endpointLabel = (tId, dId) =>
+      `GET /talent/${shortId(tId)}/documents/${shortId(dId)}`;
+
     docs.forEach((doc, i) => {
       const excerpt = doc.content
         ? doc.content.replace(/\s+/g, ' ').slice(0, 110) + (doc.content.length > 110 ? '…' : '')
@@ -513,10 +529,12 @@
         <div class="doc-body">
           <div class="doc-name">${esc(doc.name)}</div>
           ${excerpt ? `<div class="doc-excerpt">${esc(excerpt)}</div>` : ''}
+          <a class="doc-endpoint" href="${esc(endpointPath(talentId, doc.id))}" target="_blank" rel="noopener">${esc(endpointLabel(talentId, doc.id))} ↗</a>
         </div>
         <span class="doc-arrow">→</span>
       `;
       el.addEventListener('click', () => openDoc(talentId, doc.id));
+      el.querySelector('.doc-endpoint').addEventListener('click', e => e.stopPropagation());
       list.appendChild(el);
     });
   }
