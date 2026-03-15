@@ -1,0 +1,14 @@
+
+  _____      __          __     ___    ____  ____
+ / ___/___  / /____ ____/ /_   /   |  / __ \/  _/
+/ (_ / _ \/ // -_) __/ __/  / /| | / /_/ // /
+\___/\___/_/ \__/_/  \__/  /_/ |_|/ .___/___/
+                                  /_/
+
+  Talent API — Nima Salami
+  Tech Chapter praktikansøgning 2026
+
+  Frontend  →  http://localhost:${server.port}
+  Swagger   →  http://localhost:${server.port}/swagger-ui.html
+  Health    →  http://localhost:${server.port}/actuator/health
+
