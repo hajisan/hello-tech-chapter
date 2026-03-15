@@ -14,8 +14,8 @@ Bygget med **Java 21 + Spring Boot 3**, dokumenteret med **Swagger UI** og deplo
 ## Kør med Docker
 
 ```bash
-docker pull ghcr.io/hajisan/talent-api:latest
-docker run -p 8080:8080 ghcr.io/hajisan/talent-api:latest
+docker pull ghcr.io/hajisan/hello-tech-chapter:latest
+docker run -p 8080:8080 ghcr.io/hajisan/hello-tech-chapter:latest
 ```
 
 | URL | Beskrivelse |
