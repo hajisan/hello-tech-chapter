@@ -58,7 +58,7 @@ public class TalentStore {
                     new Document(
                             DOC_NIMA_1,
                             "Projekt: nimasalami.dk",
-                            "LINK: https://www.nimasalami.dk | API: https://api.nimasalami.dk/health " +
+                            "LINK: https://www.nimasalami.dk | API: https://api.nimasalami.dk/health ." +
                                     "REPO: Privat monorepo. " +
                                     "TYPE: Eget projekt – live i produktion. " +
                                     "BESKRIVELSE: Monorepo med Astro-frontend (TypeScript, Tailwind CSS v3, React-komponenter) " +
@@ -108,7 +108,7 @@ public class TalentStore {
                     new Document(
                             DOC_NIMA_3,
                             "Projekt: n8n Server",
-                            "REPO: https://github.com/hajisan/n8n-server " +
+                            "REPO: https://github.com/hajisan/n8n-server ." +
                                     "TYPE: Eget projekt, selvhostet, live i produktion. " +
                                     "BESKRIVELSE: Selvhostet n8n automationsserver på DigitalOcean Droplet (Ubuntu 24.04, Frankfurt). " +
                                     "n8n kører som Docker container bundet til Tailscale-interfacet, ikke 0.0.0.0, " +
@@ -129,8 +129,8 @@ public class TalentStore {
                     new Document(
                             DOC_NIMA_4,
                             "Projekt: GymRat",
-                            "LINK: https://gym.nimasalami.dk/demo. (demo)" +
-                                    "REPO: https://github.com/hajisan/gymrat " +
+                            "LINK: https://gym.nimasalami.dk/demo (demo)" +
+                                    "REPO: https://github.com/hajisan/gymrat ." +
                                     "TYPE: Eget projekt, live i produktion, brugt dagligt. " +
                                     "BESKRIVELSE: Personlig træningstracker bygget som PWA til iPhone, ligger på homescreen og bruges hver træningsdag. " +
                                     "REST API i Spring Boot 3.5 + Java 21 med MySQL i produktion og H2 in-memory til tests. " +
