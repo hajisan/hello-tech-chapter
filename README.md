@@ -28,6 +28,17 @@ docker run -p 8080:8080 ghcr.io/hajisan/hello-tech-chapter:latest
 | `http://localhost:8080/api-docs` | OpenAPI JSON |
 | `http://localhost:8080/actuator/health` | Health check |
 
+## CI/CD Pipeline
+
+```mermaid
+flowchart LR
+    Push["git push\nmain"] --> Test["mvn test\n7 integration tests"]
+    Test -->|pass| Build["Docker build\nlinux/amd64 + arm64"]
+    Test -->|fail| Stop["✗ blocked"]
+    Build --> GHCR["GHCR\nghcr.io/hajisan/\nhello-tech-chapter"]
+    GHCR -->|:latest + :sha| Pull["docker pull"]
+```
+
 ## Endpoints
 
 | Method | Path | Beskrivelse |
