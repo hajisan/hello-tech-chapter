@@ -35,7 +35,7 @@ flowchart LR
     Push["git push\nmain"] --> Test["mvn test - 7 integration tests"]
     Test -->|pass| Build["Docker build - linux/amd64 + arm64"]
     Test -->|fail| Stop["✗ blocked"]
-    Build --> GHCR["GHCR\nghcr.io/hajisan/hello-tech-chapter"]
+    Build --> GHCR["GHCR ghcr.io/hajisan/hello-tech-chapter"]
     GHCR -->|:latest + :sha| Pull["docker pull"]
 ```
 
