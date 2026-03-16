@@ -32,10 +32,10 @@ docker run -p 8080:8080 ghcr.io/hajisan/hello-tech-chapter:latest
 
 ```mermaid
 flowchart LR
-    Push["git push\nmain"] --> Test["mvn test\n7 integration tests"]
-    Test -->|pass| Build["Docker build\nlinux/amd64 + arm64"]
+    Push["git push\nmain"] --> Test["mvn test - 7 integration tests"]
+    Test -->|pass| Build["Docker build - linux/amd64 + arm64"]
     Test -->|fail| Stop["✗ blocked"]
-    Build --> GHCR["GHCR\nghcr.io/hajisan/\nhello-tech-chapter"]
+    Build --> GHCR["GHCR\nghcr.io/hajisan/hello-tech-chapter"]
     GHCR -->|:latest + :sha| Pull["docker pull"]
 ```
 
